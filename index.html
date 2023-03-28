@@ -2,6 +2,167 @@
 
 <html>
     <head>
+        <link rel="stylesheet" href="c:/users/philippe/desktop/p3/css-reset.css">
         <link rel="stylesheet" href="c:/users/philippe/desktop/p3/estilos.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     </head>
+
+    <body id="body">
+        <div class="topo">
+            <h1>DrivenEats</h1>
+            <h2>Sua comida em 6 minutos</h2>
+        </div>
+        <div class="menu">
+            <div class="pratos">
+                <div class="titulo_menus">
+                    <h3>Primeiro, um prato</h3>
+                </div>
+                <div class="opcoes">
+                    <button class="prato" onclick="select_prato()" id="prato1">
+                        <img src="c:/users/philippe/desktop/p3/teste.jpg">
+                        <h4>Nome do prato</h4>
+                        <p>Descrição</p>
+                        <h4>Preço</h4>
+                    </button>
+                    <button class="prato" onclick="select_prato()" id="prato2">
+                        <img src="c:/users/philippe/desktop/p3/teste.jpg">
+                        <h4>Nome do prato</h4>
+                        <p>Descrição</p>
+                        <h4>Preço</h4>
+                    </button>
+                    <button class="prato" onclick="select_prato()" id="prato3">
+                        <img src="c:/users/philippe/desktop/p3/teste.jpg">
+                        <h4>Nome do prato</h4>
+                        <p>Descrição</p>
+                        <h4>Preço</h4>
+                    </button>
+                </div>
+            </div>
+            <div class="bebidas">
+                <div class="titulo_menus">
+                    <h3>Primeiro, um prato</h3>
+                </div>
+                <div class="opcoes">
+                    <button class="prato" onclick="select_bebida()" id="bebida1">
+                        <img src="c:/users/philippe/desktop/p3/teste.jpg">
+                        <h4>Nome do prato</h4>
+                        <p>Descrição</p>
+                        <h4>Preço</h4>
+                    </button>
+                    <button class="prato"  onclick="select_bebida()" id="bebida2">
+                        <img src="c:/users/philippe/desktop/p3/teste.jpg">
+                        <h4>Nome do prato</h4>
+                        <p>Descrição</p>
+                        <h4>Preço</h4>
+                    </button>
+                    <button class="prato"  onclick="select_bebida()" id="bebida3">
+                        <img src="c:/users/philippe/desktop/p3/teste.jpg">
+                        <h4>Nome do prato</h4>
+                        <p>Descrição</p>
+                        <h4>Preço</h4>
+                    </button>
+                </div>
+            </div>
+            <div class="sobremesas">
+                <div class="titulo_menus">
+                    <h3>Primeiro, um prato</h3>
+                </div>
+                <div class="opcoes">
+                    <button class="prato" onclick="select_sobremesa()" id="sobremesa1">
+                        <img src="c:/users/philippe/desktop/p3/teste.jpg">
+                        <h4>Nome do prato</h4>
+                        <p>Descrição</p>
+                        <h4>Preço</h4>
+                    </button>
+                    <button class="prato"  onclick="select_sobremesa()" id="sobremesa2">
+                        <img src="c:/users/philippe/desktop/p3/teste.jpg">
+                        <h4>Nome do prato</h4>
+                        <p>Descrição</p>
+                        <h4>Preço</h4>
+                    </button>
+                    <button class="prato"  onclick="select_sobremesa()" id="sobremesa3">
+                        <img src="c:/users/philippe/desktop/p3/teste.jpg">
+                        <h4>Nome do prato</h4>
+                        <p>Descrição</p>
+                        <h4>Preço</h4>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="base">
+            <button class="botao-pedido" id="botao-pedido">
+                <h1 id="frase-botao-pedido">Selecione os 3 para fechar seu pedido</h1>
+            </button>
+        </div>
+        <div class="confirmacao" id="confirmacao">
+        </div>
+    </body>
 </html>
+
+<script>
+    function mudar_botao_pedido(){
+        let prato = 0;
+        let bebida = 0;
+        let sobremesa = 0;
+        let opcoes = ["prato", "bebida", "sobremesa"];
+        for (let a=0; a<3; a++){
+            for (let b=1; b<4; b++){
+                let id = opcoes[a]+ b;
+                if (document.getElementById(id).style.border == "2px solid green"){
+                    if (opcoes[a] == "prato"){
+                        prato = 1;
+                        break;
+                    }
+                    else if (opcoes[a] == "bebida"){
+                        bebida = 1;
+                        break;
+                    }
+                    else if (opcoes[a] == "sobremesa"){
+                        sobremesa = 1;
+                        break;
+                    }
+                }
+            }
+        }
+        if (prato != 0 && bebida != 0 && sobremesa != 0){
+            document.getElementById("frase-botao-pedido").innerHTML = "mudei";
+            document.getElementById("botao-pedido").onclick = function () {confirmacao();};
+        }
+    }
+    function select_prato(){
+        let b = event.target.closest('button');
+        for (let a=1; a<4;a++){
+            let id = "prato" + a;
+            elem = document.getElementById(id);
+            elem.style.border = "1px solid black";
+        }
+        b.style.border = "2px solid green";
+        mudar_botao_pedido();
+    }
+    function select_bebida(){
+        let b = event.target.closest('button');
+        for (let a=1; a<4;a++){
+            let id = "bebida" + a;
+            elem = document.getElementById(id);
+            elem.style.border = "1px solid black";
+        }
+        b.style.border = "2px solid green";
+        mudar_botao_pedido();
+    }
+    function select_sobremesa(){
+        let b = event.target.closest('button');
+        for (let a=1; a<4;a++){
+            let id = "sobremesa" + a;
+            elem = document.getElementById(id);
+            elem.style.border = "1px solid black";
+        }
+        b.style.border = "2px solid green";
+        mudar_botao_pedido();
+    }
+    function confirmacao(){
+        document.getElementById("confirmacao").style.display = "inline-block";
+    }
+</script>
