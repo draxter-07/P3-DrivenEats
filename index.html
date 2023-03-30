@@ -2,8 +2,10 @@
 
 <html>
     <head>
-        <link rel="stylesheet" href="c:/users/philippe/desktop/p3/css-reset.css">
-        <link rel="stylesheet" href="c:/users/philippe/desktop/p3/estilos.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css-reset.css">
+        <link rel="stylesheet" href="./estilos.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -12,93 +14,123 @@
 
     <body id="body">
         <div class="topo">
-            <h1>DrivenEats</h1>
-            <h2>Sua comida em 6 minutos</h2>
+            <span class="topo-titulo">DrivenEats</span>
+            <span class="topo-subtitulo">Sua comida em 6 minutos</span>
         </div>
         <div class="menu">
             <div class="pratos">
-                <div class="titulo_menus">
-                    <h3>Primeiro, um prato</h3>
+                <div>
+                    <span class="titulos-menu">Primeiro, um prato</span>
                 </div>
                 <div class="opcoes">
                     <button class="prato" onclick="select_prato()" id="prato1">
-                        <img src="c:/users/philippe/desktop/p3/teste.jpg">
-                        <h4>Nome do prato</h4>
-                        <p>Descrição</p>
-                        <h4>Preço</h4>
+                        <img src="./imgs/frango_yin_yang.png">
+                        <span class="prato-nome">Nome do prato</span>
+                        <span class="prato-descricao">Um pouco de arroz and feijão and frango and outras coisa CAEITAS?</span>
+                        <span class="prato-preco">R$ 10,00</span>
+                        <ion-icon id="icon-check" name="checkmark-circle"></ion-icon>
                     </button>
                     <button class="prato" onclick="select_prato()" id="prato2">
-                        <img src="c:/users/philippe/desktop/p3/teste.jpg">
-                        <h4>Nome do prato</h4>
-                        <p>Descrição</p>
-                        <h4>Preço</h4>
+                        <img src="./imgs/frango_yin_yang.png">
+                        <span class="prato-nome">Nome do prato</span>
+                        <span class="prato-descricao">Um pouco de arroz and feijão and frango and outras coisa CAEITAS?</span>
+                        <span class="prato-preco">R$ 10,00</span>
+                        <ion-icon id="icon-check" name="checkmark-circle"></ion-icon>
                     </button>
                     <button class="prato" onclick="select_prato()" id="prato3">
-                        <img src="c:/users/philippe/desktop/p3/teste.jpg">
-                        <h4>Nome do prato</h4>
-                        <p>Descrição</p>
-                        <h4>Preço</h4>
+                        <img src="./imgs/frango_yin_yang.png">
+                        <span class="prato-nome">Nome do prato</span>
+                        <span class="prato-descricao">Um pouco de arroz and feijão and frango and outras coisa CAEITAS?</span>
+                        <span class="prato-preco">R$ 10,00</span>
+                        <ion-icon id="icon-check" name="checkmark-circle"></ion-icon>
                     </button>
                 </div>
             </div>
             <div class="bebidas">
-                <div class="titulo_menus">
-                    <h3>Primeiro, um prato</h3>
+                <div>
+                    <span class="titulos-menu">Agora, sua bebida</span>
                 </div>
                 <div class="opcoes">
                     <button class="prato" onclick="select_bebida()" id="bebida1">
-                        <img src="c:/users/philippe/desktop/p3/teste.jpg">
-                        <h4>Nome do prato</h4>
-                        <p>Descrição</p>
-                        <h4>Preço</h4>
+                        <img src="./imgs/frango_yin_yang.png">
+                        <span class="prato-nome">Nome do prato</span>
+                        <span class="prato-descricao">Um pouco de arroz and feijão and frango and outras coisa CAEITAS?</span>
+                        <span class="prato-preco">R$ 10,00</span>
+                        <ion-icon id="icon-check" name="checkmark-circle"></ion-icon>
                     </button>
-                    <button class="prato"  onclick="select_bebida()" id="bebida2">
-                        <img src="c:/users/philippe/desktop/p3/teste.jpg">
-                        <h4>Nome do prato</h4>
-                        <p>Descrição</p>
-                        <h4>Preço</h4>
+                    <button class="prato" onclick="select_bebida()" id="bebida2">
+                        <img src="./imgs/frango_yin_yang.png">
+                        <span class="prato-nome">Nome do prato</span>
+                        <span class="prato-descricao">Um pouco de arroz and feijão and frango and outras coisa CAEITAS?</span>
+                        <span class="prato-preco">R$ 10,00</span>
+                        <ion-icon id="icon-check" name="checkmark-circle"></ion-icon>
                     </button>
-                    <button class="prato"  onclick="select_bebida()" id="bebida3">
-                        <img src="c:/users/philippe/desktop/p3/teste.jpg">
-                        <h4>Nome do prato</h4>
-                        <p>Descrição</p>
-                        <h4>Preço</h4>
+                    <button class="prato" onclick="select_bebida()" id="bebida3">
+                        <img src="./imgs/frango_yin_yang.png">
+                        <span class="prato-nome">Nome do prato</span>
+                        <span class="prato-descricao">Um pouco de arroz and feijão and frango and outras coisa CAEITAS?</span>
+                        <span class="prato-preco">R$ 10,00</span>
+                        <ion-icon id="icon-check" name="checkmark-circle"></ion-icon>
                     </button>
                 </div>
             </div>
             <div class="sobremesas">
-                <div class="titulo_menus">
-                    <h3>Primeiro, um prato</h3>
+                <div>
+                    <span class="titulos-menu">Por fim, sua sobremesa</span>
                 </div>
                 <div class="opcoes">
                     <button class="prato" onclick="select_sobremesa()" id="sobremesa1">
-                        <img src="c:/users/philippe/desktop/p3/teste.jpg">
-                        <h4>Nome do prato</h4>
-                        <p>Descrição</p>
-                        <h4>Preço</h4>
+                        <img src="./imgs/frango_yin_yang.png">
+                        <span class="prato-nome">Nome do prato</span>
+                        <span class="prato-descricao">Um pouco de arroz and feijão and frango and outras coisa CAEITAS?</span>
+                        <span class="prato-preco">R$ 10,00</span>
+                        <ion-icon id="icon-check" name="checkmark-circle"></ion-icon>
                     </button>
-                    <button class="prato"  onclick="select_sobremesa()" id="sobremesa2">
-                        <img src="c:/users/philippe/desktop/p3/teste.jpg">
-                        <h4>Nome do prato</h4>
-                        <p>Descrição</p>
-                        <h4>Preço</h4>
+                    <button class="prato" onclick="select_sobremesa()" id="sobremesa2">
+                        <img src="./imgs/frango_yin_yang.png">
+                        <span class="prato-nome">Nome do prato</span>
+                        <span class="prato-descricao">Um pouco de arroz and feijão and frango and outras coisa CAEITAS?</span>
+                        <span class="prato-preco">R$ 10,00</span>
+                        <ion-icon id="icon-check" name="checkmark-circle"></ion-icon>
                     </button>
-                    <button class="prato"  onclick="select_sobremesa()" id="sobremesa3">
-                        <img src="c:/users/philippe/desktop/p3/teste.jpg">
-                        <h4>Nome do prato</h4>
-                        <p>Descrição</p>
-                        <h4>Preço</h4>
+                    <button class="prato" onclick="select_sobremesa()" id="sobremesa3">
+                        <img src="./imgs/frango_yin_yang.png">
+                        <span class="prato-nome">Nome do prato</span>
+                        <span class="prato-descricao">Um pouco de arroz and feijão and frango and outras coisa CAEITAS?</span>
+                        <span class="prato-preco">R$ 10,00</span>
+                        <ion-icon id="icon-check" name="checkmark-circle"></ion-icon>
                     </button>
                 </div>
             </div>
         </div>
         <div class="base">
             <button class="botao-pedido" id="botao-pedido">
-                <h1 id="frase-botao-pedido">Selecione os 3 para fechar seu pedido</h1>
+                <span id="frase-botao-pedido">Selecione os 3 para fechar seu pedido</span>
             </button>
         </div>
         <div class="confirmacao" id="confirmacao">
+            <span class="conf-titulo">Confirme seu pedido</span>
+            <div class="conf-lines">
+                <span id="conf-pratonome">prato</span>
+                <span id="conf-pratopreco">preço</span>
+            </div>
+            <div class="conf-lines">
+                <span>prato</span>
+                <span>preço</span>
+            </div>
+            <div class="conf-lines">
+                <span>prato</span>
+                <span>preço</span>
+            </div>
+            <div class="conf-total">
+                <span>TOTAL</span>
+                <span>preço</span>
+            </div>
+            <button class="conf-confirmar">teste</button>
+            <button class="conf-cancelar">teste</button>
         </div>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body>
 </html>
 
@@ -108,12 +140,28 @@
         let bebida = 0;
         let sobremesa = 0;
         let opcoes = ["prato", "bebida", "sobremesa"];
+        let nome_prato = "";
+        let preco_prato = 0;
         for (let a=0; a<3; a++){
             for (let b=1; b<4; b++){
                 let id = opcoes[a]+ b;
-                if (document.getElementById(id).style.border == "2px solid green"){
+                if (document.getElementById(id).style.border == "5px solid green"){
                     if (opcoes[a] == "prato"){
                         prato = 1;
+                        if (id=="prato1"){
+                            nome_prato = "pratoA";
+                            preco_prato = 17.90;
+                        }
+                        else if (id=="prato2"){
+                            nome_prato = "pratoB";
+                            preco_prato = 18.90;
+                        }
+                        else if (id=="prato3"){
+                            nome_prato = "pratoC";
+                            preco_prato = 19.90;
+                        }
+                        document.getElementById("conf-pratonome").innerHTML = nome_prato;
+                        document.getElementById("conf-pratopreco").innerHTML = preco_prato.toString().replace(".", ",");
                         break;
                     }
                     else if (opcoes[a] == "bebida"){
@@ -128,41 +176,51 @@
             }
         }
         if (prato != 0 && bebida != 0 && sobremesa != 0){
-            document.getElementById("frase-botao-pedido").innerHTML = "mudei";
+            document.getElementById("frase-botao-pedido").innerHTML = "Fechar pedido";
+            document.getElementById("botao-pedido").style.backgroundColor = "green";
             document.getElementById("botao-pedido").onclick = function () {confirmacao();};
         }
     }
     function select_prato(){
         let b = event.target.closest('button');
+        let c = b.children;
         for (let a=1; a<4;a++){
             let id = "prato" + a;
             elem = document.getElementById(id);
-            elem.style.border = "1px solid black";
+            elem.style.border = "5px solid rgb(255, 255, 255)";
+            elem.children[4].style.display = "none";
         }
-        b.style.border = "2px solid green";
+        b.style.border = "5px solid green";
+        c[4].style.display = "inline";
         mudar_botao_pedido();
     }
     function select_bebida(){
         let b = event.target.closest('button');
+        let c = b.children;
         for (let a=1; a<4;a++){
             let id = "bebida" + a;
             elem = document.getElementById(id);
-            elem.style.border = "1px solid black";
+            elem.style.border = "5px solid rgb(255, 255, 255)";
+            elem.children[4].style.display = "none";
         }
-        b.style.border = "2px solid green";
+        b.style.border = "5px solid green";
+        c[4].style.display = "inline";
         mudar_botao_pedido();
     }
     function select_sobremesa(){
         let b = event.target.closest('button');
+        let c = b.children;
         for (let a=1; a<4;a++){
             let id = "sobremesa" + a;
             elem = document.getElementById(id);
-            elem.style.border = "1px solid black";
+            elem.style.border = "5px solid rgb(255, 255, 255)";
+            elem.children[4].style.display = "none";
         }
-        b.style.border = "2px solid green";
+        b.style.border = "5px solid green";
+        c[4].style.display = "inline";
         mudar_botao_pedido();
     }
     function confirmacao(){
-        document.getElementById("confirmacao").style.display = "inline-block";
+        document.getElementById("confirmacao").style.display = "flex";
     }
 </script>
