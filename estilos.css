@@ -5,6 +5,7 @@ body{
 }
 img{
     width: 170px;
+    height: 100px;
 }
 ion-icon{
     display: none;
@@ -40,6 +41,7 @@ ion-icon{
 .prato{
     box-sizing: border-box;
     width: 200px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -59,6 +61,7 @@ ion-icon{
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
     font-weight: bold;
+    text-align: left;
     margin: 10px 0px;
 }
 .prato-descricao{
@@ -103,19 +106,26 @@ ion-icon{
 .confirmacao{
     display: none;
     position: fixed;
-    top: 50vh;
-    right: 50vw;
+    box-sizing: border-box;
+    top: 10%;
+    left: 10%;
     height: auto;
-    width: auto;
+    width: 80%;
     background-color: green;
     border-radius: 10px;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 20px 20px 0px 20px;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 20px 20px 20px 20px;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     color: rgb(255, 255, 255);
+    z-index: 1;
+}
+.conf-titulo{
+    font-weight: bold;
+    margin: 0px 0px 20px 0px;
 }
 .conf-lines{
     width: 100%;
@@ -123,11 +133,30 @@ ion-icon{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin: 0px 0px 10px 0px;
 }
 .conf-total{
+    margin: 10px 0px;
+    font-weight: bold;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+.conf-confirmar{
+    border-radius: 80px;
+    background-color: rgb(255, 255, 255);
+    margin: 0px 0px 10px;
+    padding: 10px 30px;
+    border: none;
+    color: green;
+}
+.conf-cancelar{
+    border-radius: 80px;
+    background-color: green;
+    margin: 0px 0px 10px;
+    padding: 10px 30px;
+    color: white;
+    border: none;
 }
